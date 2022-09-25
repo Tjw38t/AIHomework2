@@ -159,7 +159,7 @@ def IDTS(initialState):
         for x in solutionPath:
             print(x.stepName + "-->")
         print("Done!\n")
-        runTime = startTime - endTime
+        runTime = endTime - startTime
         print("Run time = " + str(runTime)) #print runtime
         print("Nodes generated = " + str(generated))    #print nodes generated
         print("Nodes expanded = " + str(expanded) + "\n")   #print nodes expanded
