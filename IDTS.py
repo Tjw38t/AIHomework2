@@ -130,11 +130,12 @@ def IDTS(initialState):
                 runTime = startTime - endTime
                 print("\nTime ran out, an hour has elapsed.")
                 print("Run time = " + str(runTime))
+                print("Reached limit = " + str(limit))
                 print("Nodes generated = " + str(generated))
                 print("Nodes expanded = " + str(expanded) + "\n")
                 break
             currentNode = fringe.pop(0) #Remove first node from fringe
-            if currentNode.depth < limit:
+            if currentNode.depth < limit:   #if node is not at depth limit
                 newNodes, newGenerated = generateNodes(currentNode) #Expand romoved node
                 expanded += 1
                 generated += newGenerated
