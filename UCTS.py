@@ -123,7 +123,7 @@ def UCTS(initialState):
     while(not solutionFound):   #While loop for when solution has yet to be found
         endTime = datetime.datetime.now()
         if endTime >= startTime + datetime.timedelta(hours=1):  #If alotted time has passed
-            runTime = startTime - endTime
+            runTime = endTime - startTime
             print("\nTime ran out, an hour has elapsed.")
             print("Run time = " + str(runTime))
             print("Nodes generated = " + str(generated))
@@ -152,7 +152,7 @@ def UCTS(initialState):
         for x in solutionPath:
             print(x.stepName + "-->")
         print("Done!\n")
-        runTime = startTime - endTime
+        runTime = endTime - startTime
         print("Run time = " + str(runTime)) #print runtime
         print("Nodes generated = " + str(generated))    #print nodes generated
         print("Nodes expanded = " + str(expanded) + "\n")   #print nodes expanded
