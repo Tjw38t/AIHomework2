@@ -140,7 +140,7 @@ def IDTS(initialState):
                 expanded += 1
                 generated += newGenerated
                 fringe.extend(newNodes) #add generated nodes to the fringe
-                fringe.sort(key=lambda x: (-x.depth, x.state.vacLoc[0], x.state.vacLoc[1]))   #Sort the fringe
+                fringe.sort(key=lambda x: (-x.depth, x.state.vacLoc[0], x.state.vacLoc[1]))   #Sort the fringe in LIFO order with tie breakers
             if goalTest(currentNode):   #Test expanded node
                 endTime = datetime.datetime.now()
                 solutionNode = currentNode
@@ -182,5 +182,5 @@ w = startInstance(choice)
 print("\nInitialState:")
 w.printWorld()
 print("Vacuum Location: %s" % (w.vacLoc,))
-print("\nIterative Deepening Cost Tree Search...\n")
+print("\nIterative Deepening Tree Search...\n")
 IDTS(w) #Run search
