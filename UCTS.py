@@ -1,3 +1,5 @@
+#This file contains the Uniform Cost Tree Search implementation
+#Tyler Wilkins and Kamden Riley
 import copy
 import numpy
 import datetime

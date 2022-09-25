@@ -1,3 +1,5 @@
+#This file contains the Iterative Deepening Tree Search implementation
+#Tyler Wilkins and Kamden Riley
 import copy
 import numpy
 import datetime
